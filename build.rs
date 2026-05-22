@@ -20,6 +20,7 @@ fn main() {
 fn build_content() -> Result<(), Box<dyn Error>> {
     let content_dir = Path::new("content");
     let public_dir = Path::new("public");
+    let cause_content_path = public_dir.join("cause_content.json");
     let search_index_path = public_dir.join("search_index.json");
 
     println!("cargo:rerun-if-changed=build.rs");
@@ -49,6 +50,7 @@ fn build_content() -> Result<(), Box<dyn Error>> {
 
     let search_records: Vec<SearchRecord> = causes.iter().map(SearchRecord::from).collect();
     fs::create_dir_all(public_dir)?;
+    fs::write(&cause_content_path, serde_json::to_string_pretty(&causes)?)?;
     fs::write(
         &search_index_path,
         serde_json::to_string_pretty(&search_records)?,

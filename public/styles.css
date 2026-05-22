@@ -95,6 +95,144 @@ a {
     max-width: 720px;
 }
 
+.cause-detail__tags {
+    margin: 4px 0 0 -8px;
+}
+
+.cause-detail__metadata,
+.cause-detail__content,
+.image-gallery {
+    margin-top: 32px;
+}
+
+.cause-detail__section-title,
+.image-gallery__title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin: 0 0 14px;
+}
+
+.cause-detail__checklist {
+    background: #ffffff;
+    border: 1px solid #d9e2de;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.cause-detail__checklist-item {
+    border-top: 1px solid #d9e2de;
+    overflow: hidden;
+    padding: 14px 16px;
+}
+
+.cause-detail__checklist-item:first-child {
+    border-top: 0;
+}
+
+.cause-detail__checklist-key {
+    color: #47635a;
+    float: left;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    line-height: 1.5;
+    text-transform: uppercase;
+    width: 180px;
+}
+
+.cause-detail__checklist-value {
+    color: #182026;
+    line-height: 1.55;
+    margin: 0 0 0 200px;
+}
+
+.cause-detail__severity {
+    font-weight: 800;
+}
+
+.cause-detail__severity--low {
+    color: #2c6232;
+}
+
+.cause-detail__severity--medium {
+    color: #715010;
+}
+
+.cause-detail__severity--high {
+    color: #8c2f25;
+}
+
+.cause-detail__prose {
+    color: #27332e;
+    line-height: 1.65;
+    max-width: 760px;
+}
+
+.cause-detail__prose h2 {
+    color: #182026;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    margin: 26px 0 8px;
+}
+
+.cause-detail__prose h2:first-child {
+    margin-top: 0;
+}
+
+.cause-detail__prose p {
+    margin: 0 0 16px;
+}
+
+.image-gallery__items {
+    margin-top: -16px;
+}
+
+.image-gallery__item {
+    background: #ffffff;
+    border: 1px solid #d9e2de;
+    border-radius: 8px;
+    margin: 16px 0 0;
+    max-width: 760px;
+    overflow: hidden;
+}
+
+.image-gallery__image,
+.image-gallery__fallback {
+    background: #e9efec;
+    display: block;
+    min-height: 240px;
+    width: 100%;
+}
+
+.image-gallery__image {
+    height: auto;
+}
+
+.image-gallery__fallback {
+    color: #5c6a64;
+    font-weight: 800;
+    padding: 108px 16px;
+    text-align: center;
+}
+
+.image-gallery__caption {
+    border-top: 1px solid #d9e2de;
+    padding: 12px 14px 14px;
+}
+
+.image-gallery__caption-text {
+    color: #27332e;
+    display: block;
+    line-height: 1.5;
+}
+
+.image-gallery__path {
+    color: #5c6a64;
+    display: block;
+    font-size: 0.8125rem;
+    margin-top: 8px;
+    overflow-wrap: anywhere;
+}
+
 .home-page__controls {
     margin-top: 28px;
 }
@@ -282,5 +420,18 @@ a {
     .site-header__link {
         margin-left: 0;
         margin-right: 16px;
+    }
+
+    .app-shell__main {
+        padding: 36px 18px;
+    }
+
+    .cause-detail__checklist-key {
+        float: none;
+        width: auto;
+    }
+
+    .cause-detail__checklist-value {
+        margin: 6px 0 0;
     }
 }

@@ -33,7 +33,7 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 
 ### Phase 2: Core Features
 - [ ] Task 4: Home dashboard with category filtering
-- [ ] Task 5: Cause detail route
+- [x] Task 5: Cause detail route
 - [ ] Task 6: Client-side fuzzy search
 - [ ] Task 7: Taxonomy tags page
 - [ ] Task 8: About methodology page
@@ -76,11 +76,11 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 **Description:** Implement `/cause/:id` as the engineering reference page with metadata checklist, rendered body HTML, and image gallery.
 
 **Acceptance criteria:**
-- [ ] Detail page resolves cause by slug
-- [ ] Metadata renders as clear key-value checklist
-- [ ] Rendered Markdown body displays below metadata
-- [ ] Image gallery displays path, caption, and missing-image fallback
-- [ ] Unknown slug returns a not-found view
+- [x] Detail page resolves cause by slug
+- [x] Metadata renders as clear key-value checklist
+- [x] Rendered Markdown body displays below metadata
+- [x] Image gallery displays path, caption, and missing-image fallback
+- [x] Unknown slug returns a not-found view
 
 **Dependencies:** Task 3
 

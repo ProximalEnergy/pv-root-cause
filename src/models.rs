@@ -66,7 +66,7 @@ pub struct CauseImage {
     pub alt: Option<String>,
 }
 
-#[derive(Clone, Debug, Eq, PartialEq, Serialize)]
+#[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize)]
 pub struct CauseContent {
     pub front_matter: CauseFrontMatter,
     pub body_markdown: String,

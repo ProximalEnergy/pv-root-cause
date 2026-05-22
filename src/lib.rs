@@ -9,7 +9,10 @@ use leptos_router::SsrMode;
 use leptos_router::components::{Route, Router, Routes};
 use leptos_router::path;
 use leptos_router::static_routes::{StaticParamsMap, StaticRoute};
+use models::SearchRecord;
 use pages::{AboutPage, CauseDetailPage, HomePage, TagsPage};
+
+const SEARCH_INDEX_JSON: &str = include_str!("../public/search_index.json");
 
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {
@@ -72,9 +75,17 @@ pub fn App() -> impl IntoView {
 fn cause_static_route() -> StaticRoute {
     StaticRoute::new().prerender_params(|| async {
         let mut params = StaticParamsMap::new();
-        params.insert("id", Vec::new());
+        params.insert("id", cause_ids());
         params
     })
+}
+
+fn cause_ids() -> Vec<String> {
+    serde_json::from_str::<Vec<SearchRecord>>(SEARCH_INDEX_JSON)
+        .unwrap_or_default()
+        .into_iter()
+        .map(|record| record.id)
+        .collect()
 }
 
 fn not_found() -> impl IntoView {
