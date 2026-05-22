@@ -13,6 +13,7 @@ leptos = "0.8.19"
 leptos_axum = { version = "0.8", optional = true }
 leptos_meta = "0.8"
 leptos_router = "0.8"
+serde = { version = "1", features = ["derive"] }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"], optional = true }
 wasm-bindgen = { version = "0.2", optional = true }
 

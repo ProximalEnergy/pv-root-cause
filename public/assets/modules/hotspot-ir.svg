@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Representative module hotspot diagram</title>
+  <desc id="desc">A simplified photovoltaic module infrared diagram with one highlighted hot cell.</desc>
+  <rect width="960" height="540" fill="#1f2933"/>
+  <rect x="130" y="72" width="700" height="396" rx="6" fill="#111827" stroke="#9ca3af" stroke-width="4"/>
+  <g stroke="#374151" stroke-width="3">
+    <path d="M247 72v396"/>
+    <path d="M364 72v396"/>
+    <path d="M480 72v396"/>
+    <path d="M597 72v396"/>
+    <path d="M714 72v396"/>
+    <path d="M130 171h700"/>
+    <path d="M130 270h700"/>
+    <path d="M130 369h700"/>
+  </g>
+  <g fill="#2563eb">
+    <rect x="145" y="87" width="87" height="69" rx="3"/>
+    <rect x="262" y="87" width="87" height="69" rx="3"/>
+    <rect x="379" y="87" width="86" height="69" rx="3"/>
+    <rect x="495" y="87" width="87" height="69" rx="3"/>
+    <rect x="612" y="87" width="87" height="69" rx="3"/>
+    <rect x="729" y="87" width="86" height="69" rx="3"/>
+    <rect x="145" y="186" width="87" height="69" rx="3"/>
+    <rect x="262" y="186" width="87" height="69" rx="3"/>
+    <rect x="379" y="186" width="86" height="69" rx="3"/>
+    <rect x="495" y="186" width="87" height="69" rx="3"/>
+    <rect x="612" y="186" width="87" height="69" rx="3"/>
+    <rect x="729" y="186" width="86" height="69" rx="3"/>
+    <rect x="145" y="285" width="87" height="69" rx="3"/>
+    <rect x="262" y="285" width="87" height="69" rx="3"/>
+    <rect x="379" y="285" width="86" height="69" rx="3"/>
+    <rect x="495" y="285" width="87" height="69" rx="3"/>
+    <rect x="612" y="285" width="87" height="69" rx="3"/>
+    <rect x="729" y="285" width="86" height="69" rx="3"/>
+    <rect x="145" y="384" width="87" height="69" rx="3"/>
+    <rect x="262" y="384" width="87" height="69" rx="3"/>
+    <rect x="379" y="384" width="86" height="69" rx="3"/>
+    <rect x="495" y="384" width="87" height="69" rx="3"/>
+    <rect x="612" y="384" width="87" height="69" rx="3"/>
+    <rect x="729" y="384" width="86" height="69" rx="3"/>
+  </g>
+  <rect x="495" y="186" width="87" height="69" rx="3" fill="#f97316"/>
+  <circle cx="538.5" cy="220.5" r="56" fill="none" stroke="#facc15" stroke-width="10"/>
+  <text x="130" y="510" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="28">IR screening example: localized module hotspot</text>
+</svg>

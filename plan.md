@@ -28,7 +28,7 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 
 ### Phase 1: Foundation
 - [x] Task 1: Project structure and app shell
-- [ ] Task 2: Content schema and sample cause
+- [x] Task 2: Content schema and sample cause
 - [ ] Task 3: Build-time content parser
 
 ### Phase 2: Core Features
@@ -57,10 +57,10 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 **Description:** Define Rust data structures for front matter, rendered cause content, image metadata, severity, tags, and search records. Add one representative Markdown cause to prove the schema.
 
 **Acceptance criteria:**
-- [ ] Schema covers all required spec fields
-- [ ] Missing required fields fail validation
-- [ ] One sample Markdown file includes metadata, body, image captions, and tags
-- [ ] Slug/id maps cleanly to `/cause/:id`
+- [x] Schema covers all required spec fields
+- [x] Missing required fields fail validation
+- [x] One sample Markdown file includes metadata, body, image captions, and tags
+- [x] Slug/id maps cleanly to `/cause/:id`
 
 **Dependencies:** Task 1
 
