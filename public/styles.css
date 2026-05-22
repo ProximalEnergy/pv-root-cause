@@ -1,0 +1,112 @@
+:root {
+    color: #182026;
+    background: #f7f9f8;
+    font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+}
+
+.app-shell {
+    min-height: 100vh;
+}
+
+.app-shell__main {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 48px 24px;
+}
+
+.site-header {
+    border-bottom: 1px solid #d9e2de;
+    overflow: hidden;
+    padding: 18px 24px;
+}
+
+.site-header__brand {
+    float: left;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-header__nav {
+    float: right;
+}
+
+.site-header__link {
+    display: inline-block;
+    font-size: 0.9375rem;
+    margin-left: 18px;
+    text-decoration: none;
+}
+
+.site-footer {
+    border-top: 1px solid #d9e2de;
+    padding: 20px 24px;
+}
+
+.site-footer__text {
+    color: #5c6a64;
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+.home-page__eyebrow,
+.cause-detail__eyebrow {
+    color: #47635a;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.home-page__title,
+.about-page__title,
+.tags-page__title,
+.cause-detail__title,
+.not-found__title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 16px;
+}
+
+.home-page__intro,
+.about-page__body,
+.tags-page__body,
+.cause-detail__body,
+.not-found__body {
+    color: #3d4945;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 720px;
+}
+
+@media (max-width: 640px) {
+    .site-header__brand,
+    .site-header__nav {
+        float: none;
+    }
+
+    .site-header__nav {
+        margin-top: 14px;
+    }
+
+    .site-header__link {
+        margin-left: 0;
+        margin-right: 16px;
+    }
+}

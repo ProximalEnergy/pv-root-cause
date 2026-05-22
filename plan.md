@@ -4,8 +4,7 @@
 Build a Leptos SSG static site for PV underperformance root causes. Content comes from local Markdown with YAML front matter, parsed at build time into static pages and a client-side search index.
 
 ## Architecture Decisions
-- Leptos SSG, not DB/API backed. `core/src/core/models.py` and `core/src/core/db_query.py` do not exist in this repo and spec requires local Markdown.
-- Standalone static site. Do not merge into a larger app unless requirements change.
+- Leptos SSG, not DB/API backed. spec requires local Markdown.
 - True SSG required. Routes and content should be generated as static output, not runtime server-rendered.
 - SSG standard is Leptos native `<StaticRoute>` pre-rendering with `cargo-leptos` plus a quick server-export run to emit real `.html` files.
 - Markdown front matter is source of truth. `build.rs` validates metadata, renders HTML, emits `public/search_index.json`.
@@ -28,7 +27,7 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 ## Task List
 
 ### Phase 1: Foundation
-- [ ] Task 1: Project structure and app shell
+- [x] Task 1: Project structure and app shell
 - [ ] Task 2: Content schema and sample cause
 - [ ] Task 3: Build-time content parser
 
@@ -57,11 +56,11 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 **Description:** Create the Leptos app layout expected by the spec, with router, base layout, component modules, page modules, public asset directories, and static generation wiring.
 
 **Acceptance criteria:**
-- [ ] `src/lib.rs`, `src/models.rs`, `src/components/mod.rs`, and `src/pages/mod.rs` exist
-- [ ] Routes exist for `/`, `/about`, `/tags`, and `/cause/:id`
-- [ ] Routes use Leptos native `<StaticRoute>` where static pre-rendering applies
-- [ ] Public directories exist for assets and stylesheet
-- [ ] App builds with `cargo-leptos` and server-export emits actual `.html` files
+- [x] `src/lib.rs`, `src/models.rs`, `src/components/mod.rs`, and `src/pages/mod.rs` exist
+- [x] Routes exist for `/`, `/about`, `/tags`, and `/cause/:id`
+- [x] Routes use Leptos native `<StaticRoute>` where static pre-rendering applies
+- [x] Public directories exist for assets and stylesheet
+- [x] App builds with `cargo-leptos` and server-export emits actual `.html` files
 
 **Dependencies:** None
 
