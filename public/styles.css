@@ -95,6 +95,180 @@ a {
     max-width: 720px;
 }
 
+.home-page__controls {
+    margin-top: 28px;
+}
+
+.home-page__summary {
+    color: #47635a;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+.home-page__grid {
+    margin-top: 16px;
+}
+
+.home-page__empty {
+    border: 1px solid #d9e2de;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 24px;
+}
+
+.home-page__empty-title {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    margin: 0 0 8px;
+}
+
+.home-page__empty-body {
+    color: #5c6a64;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.search-bar {
+    display: block;
+    max-width: 720px;
+}
+
+.search-bar__label,
+.filter-panel__label {
+    color: #31413b;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.search-bar__input {
+    background: #ffffff;
+    border: 1px solid #b8c6c0;
+    border-radius: 8px;
+    color: #182026;
+    display: block;
+    font: inherit;
+    min-height: 44px;
+    padding: 10px 12px;
+    width: 100%;
+}
+
+.search-bar__input:focus {
+    border-color: #1d6b5b;
+    outline: 3px solid #c9ece4;
+}
+
+.filter-panel {
+    margin-top: 18px;
+}
+
+.filter-panel__controls {
+    margin: -8px 0 0 -8px;
+}
+
+.filter-panel__button {
+    background: #ffffff;
+    border: 1px solid #b8c6c0;
+    border-radius: 8px;
+    color: #31413b;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin: 8px 0 0 8px;
+    min-height: 40px;
+    padding: 8px 12px;
+}
+
+.filter-panel__button--active {
+    background: #1d6b5b;
+    border-color: #1d6b5b;
+    color: #ffffff;
+}
+
+.cause-card {
+    background: #ffffff;
+    border: 1px solid #d9e2de;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 20px;
+}
+
+.cause-card__meta {
+    overflow: hidden;
+}
+
+.cause-card__category {
+    color: #47635a;
+    float: left;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.cause-card__severity {
+    border-radius: 999px;
+    float: right;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    line-height: 1;
+    padding: 6px 8px;
+}
+
+.cause-card__severity--low {
+    background: #e4f1e6;
+    color: #2c6232;
+}
+
+.cause-card__severity--medium {
+    background: #fff0cf;
+    color: #715010;
+}
+
+.cause-card__severity--high {
+    background: #ffe0dc;
+    color: #8c2f25;
+}
+
+.cause-card__title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin: 14px 0 8px;
+}
+
+.cause-card__link {
+    text-decoration: none;
+}
+
+.cause-card__link:hover {
+    text-decoration: underline;
+}
+
+.cause-card__impact {
+    color: #3d4945;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.cause-card__tags {
+    margin: 12px 0 0 -8px;
+}
+
+.tag-pill {
+    background: #e9efec;
+    border-radius: 999px;
+    color: #31413b;
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 8px 0 0 8px;
+    padding: 7px 9px;
+}
+
 @media (max-width: 640px) {
     .site-header__brand,
     .site-header__nav {

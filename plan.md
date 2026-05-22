@@ -71,48 +71,6 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 
 **Estimated scope:** Small: 1-2 files
 
-## Task 3: Build-time content parser
-
-**Description:** Add `build.rs` pipeline to scan `content/`, parse YAML front matter, render Markdown to HTML, validate records, and write a compact JSON search index.
-
-**Acceptance criteria:**
-- [x] Build scans nested category folders under `content/`
-- [x] Front matter parse errors identify file and field
-- [x] Markdown body renders to clean HTML
-- [x] `public/search_index.json` is generated at build time
-- [x] Build re-runs when content changes
-
-**Dependencies:** Task 2
-
-**Files likely touched:**
-- `build.rs`
-- `Cargo.toml`
-- `src/models.rs`
-- `public/search_index.json`
-
-**Estimated scope:** Medium: 3-5 files
-
-## Task 4: Home dashboard with category filtering
-
-**Description:** Implement `/` as a scannable dashboard that loads generated search data, tracks query/category state, and lists matching causes as cards.
-
-**Acceptance criteria:**
-- [ ] Home page loads generated JSON on init
-- [ ] Category filter updates visible cards
-- [ ] Cause cards show title, category, severity, impact factor, and tags
-- [ ] Empty state appears when no cause matches
-
-**Dependencies:** Task 3
-
-**Files likely touched:**
-- `src/pages/home.rs`
-- `src/components/search_bar.rs`
-- `src/components/filter_panel.rs`
-- `src/components/cause_card.rs`
-- `src/components/tag_pill.rs`
-
-**Estimated scope:** Medium: 3-5 files
-
 ## Task 5: Cause detail route
 
 **Description:** Implement `/cause/:id` as the engineering reference page with metadata checklist, rendered body HTML, and image gallery.
