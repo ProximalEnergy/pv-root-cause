@@ -51,28 +51,6 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 - [ ] All acceptance criteria met
 - [ ] Ready for review
 
-## Task 1: Project structure and app shell
-
-**Description:** Create the Leptos app layout expected by the spec, with router, base layout, component modules, page modules, public asset directories, and static generation wiring.
-
-**Acceptance criteria:**
-- [x] `src/lib.rs`, `src/models.rs`, `src/components/mod.rs`, and `src/pages/mod.rs` exist
-- [x] Routes exist for `/`, `/about`, `/tags`, and `/cause/:id`
-- [x] Routes use Leptos native `<StaticRoute>` where static pre-rendering applies
-- [x] Public directories exist for assets and stylesheet
-- [x] App builds with `cargo-leptos` and server-export emits actual `.html` files
-
-**Dependencies:** None
-
-**Files likely touched:**
-- `Cargo.toml`
-- `src/main.rs`
-- `src/lib.rs`
-- `src/components/mod.rs`
-- `src/pages/mod.rs`
-- `public/styles.css`
-
-**Estimated scope:** Medium: 3-5 files
 
 ## Task 2: Content schema and sample cause
 
