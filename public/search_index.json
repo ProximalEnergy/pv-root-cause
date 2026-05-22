@@ -1,0 +1,16 @@
+[
+  {
+    "id": "module-hotspot",
+    "title": "Module Hotspot from Cell Damage",
+    "category": "Modules",
+    "tags": [
+      "thermal anomaly",
+      "cell crack",
+      "drone IR",
+      "yield loss"
+    ],
+    "severity": "High",
+    "impact_factor": "Localized heating can reduce string output and create escalating reliability risk when bypass diodes or cracked cells remain in service.",
+    "route": "/cause/module-hotspot"
+  }
+]

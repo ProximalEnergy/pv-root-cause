@@ -29,7 +29,7 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 ### Phase 1: Foundation
 - [x] Task 1: Project structure and app shell
 - [x] Task 2: Content schema and sample cause
-- [ ] Task 3: Build-time content parser
+- [x] Task 3: Build-time content parser
 
 ### Phase 2: Core Features
 - [ ] Task 4: Home dashboard with category filtering
@@ -76,11 +76,11 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 **Description:** Add `build.rs` pipeline to scan `content/`, parse YAML front matter, render Markdown to HTML, validate records, and write a compact JSON search index.
 
 **Acceptance criteria:**
-- [ ] Build scans nested category folders under `content/`
-- [ ] Front matter parse errors identify file and field
-- [ ] Markdown body renders to clean HTML
-- [ ] `public/search_index.json` is generated at build time
-- [ ] Build re-runs when content changes
+- [x] Build scans nested category folders under `content/`
+- [x] Front matter parse errors identify file and field
+- [x] Markdown body renders to clean HTML
+- [x] `public/search_index.json` is generated at build time
+- [x] Build re-runs when content changes
 
 **Dependencies:** Task 2
 
