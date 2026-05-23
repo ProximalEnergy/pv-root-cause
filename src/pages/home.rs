@@ -1,6 +1,8 @@
 use crate::components::{CauseCard, FilterPanel, SearchBar};
 use crate::models::SearchRecord;
+use crate::search::search_causes;
 use leptos::prelude::*;
+use leptos_router::hooks::use_query_map;
 use std::collections::BTreeSet;
 
 const SEARCH_INDEX_JSON: &str = include_str!("../../public/search_index.json");
@@ -10,23 +12,23 @@ pub fn HomePage() -> impl IntoView {
     let initial_records = load_search_records();
     let categories = unique_categories(&initial_records);
     let (records, _set_records) = signal(initial_records);
-    let (query, set_query) = signal(String::new());
+    let query_map = use_query_map();
+    let (query, set_query) = signal(
+        query_map.get().get("tag").unwrap_or_default(),
+    );
     let (active_category, set_active_category) = signal(None::<String>);
 
     let filtered_records = move || {
-        let search_text = query.get().trim().to_lowercase();
+        let search_text = query.get();
         let selected_category = active_category.get();
 
-        records
-            .get()
-            .into_iter()
-            .filter(|record| {
-                selected_category
-                    .as_ref()
-                    .is_none_or(|category| record.category == *category)
-            })
-            .filter(|record| search_text.is_empty() || record_matches_query(record, &search_text))
-            .collect::<Vec<_>>()
+        let mut results = search_causes(&search_text, &records.get());
+
+        if let Some(category) = selected_category {
+            results.retain(|sc| sc.record.category == category);
+        }
+
+        results.into_iter().map(|sc| sc.record).collect::<Vec<_>>()
     };
 
     view! {
@@ -84,16 +86,4 @@ fn unique_categories(records: &[SearchRecord]) -> Vec<String> {
         .collect::<BTreeSet<_>>()
         .into_iter()
         .collect()
-}
-
-fn record_matches_query(record: &SearchRecord, search_text: &str) -> bool {
-    let title = record.title.to_lowercase();
-    let category = record.category.to_lowercase();
-
-    title.contains(search_text)
-        || category.contains(search_text)
-        || record
-            .tags
-            .iter()
-            .any(|tag| tag.to_lowercase().contains(search_text))
 }

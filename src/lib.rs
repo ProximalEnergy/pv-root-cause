@@ -1,6 +1,7 @@
 pub mod components;
 pub mod models;
 pub mod pages;
+pub mod search;
 
 use components::{Footer, Header};
 use leptos::prelude::*;

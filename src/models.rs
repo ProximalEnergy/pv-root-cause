@@ -146,6 +146,25 @@ impl From<&CauseContent> for SearchRecord {
 }
 
 #[derive(Clone, Debug, Eq, PartialEq)]
+pub struct TagCount {
+    pub tag: String,
+    pub count: usize,
+}
+
+pub fn collect_tag_counts(records: &[SearchRecord]) -> Vec<TagCount> {
+    let mut counts = std::collections::BTreeMap::new();
+    for record in records {
+        for tag in &record.tags {
+            *counts.entry(tag.clone()).or_insert(0) += 1;
+        }
+    }
+    counts
+        .into_iter()
+        .map(|(tag, count)| TagCount { tag, count })
+        .collect()
+}
+
+#[derive(Clone, Debug, Eq, PartialEq)]
 pub struct ValidationError {
     pub errors: Vec<String>,
 }
@@ -245,5 +264,39 @@ mod tests {
                 .iter()
                 .any(|message| message.contains("detection_method"))
         );
+    }
+
+    #[test]
+    fn collect_tag_counts_deduplicates_and_sorts() {
+        let records = vec![
+            SearchRecord {
+                id: "a".to_string(),
+                title: "A".to_string(),
+                category: "C".to_string(),
+                tags: vec!["thermal".to_string(), "crack".to_string()],
+                severity: Severity::High,
+                impact_factor: String::new(),
+                route: "/cause/a".to_string(),
+            },
+            SearchRecord {
+                id: "b".to_string(),
+                title: "B".to_string(),
+                category: "C".to_string(),
+                tags: vec!["thermal".to_string(), "bypass".to_string()],
+                severity: Severity::Medium,
+                impact_factor: String::new(),
+                route: "/cause/b".to_string(),
+            },
+        ];
+        let counts = collect_tag_counts(&records);
+        assert_eq!(counts.len(), 3);
+        assert_eq!(counts[0], TagCount { tag: "bypass".to_string(), count: 1 });
+        assert_eq!(counts[1], TagCount { tag: "crack".to_string(), count: 1 });
+        assert_eq!(counts[2], TagCount { tag: "thermal".to_string(), count: 2 });
+    }
+
+    #[test]
+    fn collect_tag_counts_empty_records() {
+        assert!(collect_tag_counts(&[]).is_empty());
     }
 }

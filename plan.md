@@ -26,14 +26,8 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 
 ## Task List
 
-### Phase 1: Foundation
-- [x] Task 1: Project structure and app shell
-- [x] Task 2: Content schema and sample cause
-- [x] Task 3: Build-time content parser
 
 ### Phase 2: Core Features
-- [ ] Task 4: Home dashboard with category filtering
-- [x] Task 5: Cause detail route
 - [ ] Task 6: Client-side fuzzy search
 - [ ] Task 7: Taxonomy tags page
 - [ ] Task 8: About methodology page
@@ -51,46 +45,6 @@ Build a Leptos SSG static site for PV underperformance root causes. Content come
 - [ ] All acceptance criteria met
 - [ ] Ready for review
 
-
-## Task 2: Content schema and sample cause
-
-**Description:** Define Rust data structures for front matter, rendered cause content, image metadata, severity, tags, and search records. Add one representative Markdown cause to prove the schema.
-
-**Acceptance criteria:**
-- [x] Schema covers all required spec fields
-- [x] Missing required fields fail validation
-- [x] One sample Markdown file includes metadata, body, image captions, and tags
-- [x] Slug/id maps cleanly to `/cause/:id`
-
-**Dependencies:** Task 1
-
-**Files likely touched:**
-- `src/models.rs`
-- `content/modules/example.md`
-- `public/assets/`
-
-**Estimated scope:** Small: 1-2 files
-
-## Task 5: Cause detail route
-
-**Description:** Implement `/cause/:id` as the engineering reference page with metadata checklist, rendered body HTML, and image gallery.
-
-**Acceptance criteria:**
-- [x] Detail page resolves cause by slug
-- [x] Metadata renders as clear key-value checklist
-- [x] Rendered Markdown body displays below metadata
-- [x] Image gallery displays path, caption, and missing-image fallback
-- [x] Unknown slug returns a not-found view
-
-**Dependencies:** Task 3
-
-**Files likely touched:**
-- `src/pages/detail.rs`
-- `src/components/image_gallery.rs`
-- `src/components/tag_pill.rs`
-- `src/models.rs`
-
-**Estimated scope:** Medium: 3-5 files
 
 ## Task 6: Client-side fuzzy search
 
