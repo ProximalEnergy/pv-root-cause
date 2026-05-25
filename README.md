@@ -30,7 +30,7 @@ images:
 ---
 ```
 
-Allowed severity values are `Low`, `Medium`, and `High`. Each entry must have a unique `id`, at least one tag, at least one image, and every image must include a non-empty `caption`. Image `alt` text is optional but recommended when the caption is not descriptive enough for non-visual use.
+Allowed severity values are `Low`, `Medium`, and `High`. Each entry must have a unique `id` and at least one tag. Image references are optional; when included, every image must include a non-empty `caption`. Image `alt` text is optional but recommended when the caption is not descriptive enough for non-visual use.
 
 After the front matter, write the engineering reference in Markdown. Raw HTML is stripped during rendering.
 

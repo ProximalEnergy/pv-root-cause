@@ -11,6 +11,7 @@ pub struct CauseFrontMatter {
     pub impact_factor: String,
     pub detection_method: String,
     pub mitigation: String,
+    #[serde(default)]
     pub images: Vec<CauseImage>,
 }
 
@@ -27,10 +28,6 @@ impl CauseFrontMatter {
 
         if self.tags.is_empty() {
             errors.push("tags must include at least one taxonomy label".to_string());
-        }
-
-        if self.images.is_empty() {
-            errors.push("images must include at least one referenced asset".to_string());
         }
 
         for (index, tag) in self.tags.iter().enumerate() {
@@ -290,9 +287,27 @@ mod tests {
         ];
         let counts = collect_tag_counts(&records);
         assert_eq!(counts.len(), 3);
-        assert_eq!(counts[0], TagCount { tag: "bypass".to_string(), count: 1 });
-        assert_eq!(counts[1], TagCount { tag: "crack".to_string(), count: 1 });
-        assert_eq!(counts[2], TagCount { tag: "thermal".to_string(), count: 2 });
+        assert_eq!(
+            counts[0],
+            TagCount {
+                tag: "bypass".to_string(),
+                count: 1
+            }
+        );
+        assert_eq!(
+            counts[1],
+            TagCount {
+                tag: "crack".to_string(),
+                count: 1
+            }
+        );
+        assert_eq!(
+            counts[2],
+            TagCount {
+                tag: "thermal".to_string(),
+                count: 2
+            }
+        );
     }
 
     #[test]

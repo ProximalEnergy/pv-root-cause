@@ -1,5 +1,49 @@
 [
   {
+    "id": "flawed-pan-file-losses",
+    "title": "Flawed PAN File Yield Losses",
+    "category": "Modeling",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "Incorrect or nonrepresentative PAN files can bias simulated module performance, creating yield expectations that differ from field behavior before any physical plant fault exists.",
+    "route": "/cause/flawed-pan-file-losses"
+  },
+  {
+    "id": "fungal-soiling-losses",
+    "title": "Fungal Soiling Yield Losses",
+    "category": "Soiling",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "Fungal growth and related persistent biological contamination can reduce glass transmittance, increase nonuniform soiling, and create production losses that do not reset after light rain.",
+    "route": "/cause/fungal-soiling-losses"
+  },
+  {
+    "id": "granular-dust-soiling-losses",
+    "title": "Granular Dust Soiling Losses",
+    "category": "Soiling",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "Dust deposited on the module glass reduces transmittance, depresses array current, and can accumulate into persistent energy loss between rain or cleaning events.",
+    "route": "/cause/granular-dust-soiling-losses"
+  },
+  {
+    "id": "grid-curtailment-losses",
+    "title": "Grid Curtailment Yield Losses",
+    "category": "Grid",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "High",
+    "impact_factor": "Curtailment limits export below available plant power, reducing realized energy and complicating performance metrics when availability and equipment health remain normal.",
+    "route": "/cause/grid-curtailment-losses"
+  },
+  {
     "id": "inverter-voltage-floor-losses",
     "title": "Inverter Voltage Floor Losses",
     "category": "Inverters",
@@ -21,6 +65,39 @@
     "severity": "High",
     "impact_factor": "Localized heating can reduce string output and create escalating reliability risk when bypass diodes or cracked cells remain in service.",
     "route": "/cause/module-hotspot"
+  },
+  {
+    "id": "snow-accumulation-losses",
+    "title": "Snow Accumulation Yield Losses",
+    "category": "Soiling",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "Snow cover blocks irradiance at the module surface, creates partial-string mismatch during melt and slide-off, and can materially reduce winter energy yield in cold regions.",
+    "route": "/cause/snow-accumulation-losses"
+  },
+  {
+    "id": "spectral-effect-losses",
+    "title": "Spectral Effect Yield Losses",
+    "category": "Modules",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "Differences between the incident solar spectrum, the reference spectrum, and module spectral response can bias capacity tests and shift realized energy yield.",
+    "route": "/cause/spectral-effect-losses"
+  },
+  {
+    "id": "terrain-undulation-yield-losses",
+    "title": "Terrain Undulation Yield Losses",
+    "category": "Trackers",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "Rolling terrain changes tracker row geometry, backtracking behavior, and inter-row shading, which can leave recoverable energy losses concentrated in specific motor blocks.",
+    "route": "/cause/terrain-undulation-yield-losses"
   },
   {
     "id": "tracker-twist-performance-loss",

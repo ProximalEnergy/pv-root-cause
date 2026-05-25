@@ -3,6 +3,10 @@ use leptos::prelude::*;
 
 #[component]
 pub fn ImageGallery(images: Vec<CauseImage>) -> impl IntoView {
+    if images.is_empty() {
+        return ().into_any();
+    }
+
     view! {
         <section class="image-gallery" aria-labelledby="image-gallery-title">
             <h2 class="image-gallery__title" id="image-gallery-title">"Image Gallery"</h2>
@@ -13,6 +17,7 @@ pub fn ImageGallery(images: Vec<CauseImage>) -> impl IntoView {
             </div>
         </section>
     }
+    .into_any()
 }
 
 #[component]
