@@ -24,3 +24,12 @@ target
 # Added by cargo
 
 /target
+
+# AWS CDK
+cdk.out/
+.jsii-cache/
+
+# Python
+__pycache__/
+.venv/
+.uv-cache/

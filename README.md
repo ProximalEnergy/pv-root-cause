@@ -6,7 +6,9 @@ Static Leptos compendium for photovoltaic underperformance root causes.
 
 - Build and validate content: `cargo test`
 - Build the static site assets: `cargo leptos build`
-- Serve locally: `mise deploy`
+- Serve locally: `mise dev`
+- Deploy static build and Route 53 DNS: `mise deploy`
+- Manage Route 53 DNS for `pv-root-cause.proximal.energy`: see `infra/README.md`
 
 ## Content Authoring
 

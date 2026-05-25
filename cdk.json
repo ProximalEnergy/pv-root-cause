@@ -1,0 +1,8 @@
+{
+  "app": "bash scripts/cdk-app.sh",
+  "context": {
+    "apexDomain": "proximal.energy",
+    "recordName": "pv-root-cause",
+    "pagesTarget": "proximalenergy.github.io."
+  }
+}

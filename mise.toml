@@ -1,6 +1,10 @@
 [tools]
 rust = "1.95"
 
-[tasks.deploy]
+[tasks.dev]
 description = "Build and serve the Leptos site on localhost"
 run = "cargo leptos serve"
+
+[tasks.deploy]
+description = "Build the static site and deploy Route 53 DNS"
+run = "bash scripts/deploy.sh"
