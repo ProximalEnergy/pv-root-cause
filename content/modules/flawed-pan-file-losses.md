@@ -1,7 +1,7 @@
 ---
 id: flawed-pan-file-losses
 title: Flawed PAN File Yield Losses
-category: Modeling
+category: Modules
 tags:
   - yield loss
 severity: Medium
