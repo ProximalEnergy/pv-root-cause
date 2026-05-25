@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 960 560">
+  <title>Tracker twist performance loss diagram</title>
+  <desc>Comparison of a uniform tracker row and a twisted tracker row with cosine and shading loss zones.</desc>
+  <rect width="960" height="560" fill="#f6f8f6"/>
+  <rect x="44" y="44" width="872" height="472" rx="8" fill="#1d203d"/>
+  <path d="M768 44h148v148c-76-17-127-68-148-148Z" fill="#7f98c5"/>
+  <path d="M44 420c120-52 222-46 306 18 71 54 145 65 222 31 83-37 188-24 344 49v-2H44Z" fill="#2f665b" opacity=".72"/>
+  <g fill="#ffffff">
+    <text x="84" y="102" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Tracker Twist</text>
+    <text x="84" y="134" font-family="Inter, Arial, sans-serif" font-size="18" opacity=".82">Performance loss from non-uniform row angle</text>
+  </g>
+  <g transform="translate(92 188)">
+    <text x="0" y="-28" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Uniform tracking plane</text>
+    <line x1="26" y1="80" x2="338" y2="80" stroke="#c8d2dd" stroke-width="4"/>
+    <g transform="translate(44 23) rotate(-12 132 44)">
+      <rect x="0" y="0" width="264" height="88" rx="4" fill="#264f78" stroke="#dce8f2" stroke-width="3"/>
+      <g stroke="#dce8f2" stroke-width="2" opacity=".88">
+        <line x1="44" y1="0" x2="44" y2="88"/>
+        <line x1="88" y1="0" x2="88" y2="88"/>
+        <line x1="132" y1="0" x2="132" y2="88"/>
+        <line x1="176" y1="0" x2="176" y2="88"/>
+        <line x1="220" y1="0" x2="220" y2="88"/>
+        <line x1="0" y1="29" x2="264" y2="29"/>
+        <line x1="0" y1="58" x2="264" y2="58"/>
+      </g>
+    </g>
+    <circle cx="80" cy="80" r="10" fill="#f0b84f"/>
+    <circle cx="182" cy="80" r="10" fill="#f0b84f"/>
+    <circle cx="286" cy="80" r="10" fill="#f0b84f"/>
+    <path d="M62 132h246" stroke="#8fb36d" stroke-width="8" stroke-linecap="round"/>
+    <text x="56" y="166" fill="#dce8f2" font-family="Inter, Arial, sans-serif" font-size="15">Consistent angle and shadow line</text>
+  </g>
+  <g transform="translate(508 188)">
+    <text x="0" y="-28" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Twisted row</text>
+    <line x1="26" y1="80" x2="338" y2="80" stroke="#c8d2dd" stroke-width="4"/>
+    <g>
+      <g transform="translate(34 24) rotate(-23 52 44)">
+        <rect x="0" y="0" width="104" height="88" rx="4" fill="#264f78" stroke="#dce8f2" stroke-width="3"/>
+        <g stroke="#dce8f2" stroke-width="2" opacity=".88">
+          <line x1="35" y1="0" x2="35" y2="88"/>
+          <line x1="70" y1="0" x2="70" y2="88"/>
+          <line x1="0" y1="29" x2="104" y2="29"/>
+          <line x1="0" y1="58" x2="104" y2="58"/>
+        </g>
+      </g>
+      <g transform="translate(138 25) rotate(-10 52 44)">
+        <rect x="0" y="0" width="104" height="88" rx="4" fill="#264f78" stroke="#dce8f2" stroke-width="3"/>
+        <g stroke="#dce8f2" stroke-width="2" opacity=".88">
+          <line x1="35" y1="0" x2="35" y2="88"/>
+          <line x1="70" y1="0" x2="70" y2="88"/>
+          <line x1="0" y1="29" x2="104" y2="29"/>
+          <line x1="0" y1="58" x2="104" y2="58"/>
+        </g>
+      </g>
+      <g transform="translate(240 26) rotate(9 52 44)">
+        <rect x="0" y="0" width="104" height="88" rx="4" fill="#264f78" stroke="#dce8f2" stroke-width="3"/>
+        <g stroke="#dce8f2" stroke-width="2" opacity=".88">
+          <line x1="35" y1="0" x2="35" y2="88"/>
+          <line x1="70" y1="0" x2="70" y2="88"/>
+          <line x1="0" y1="29" x2="104" y2="29"/>
+          <line x1="0" y1="58" x2="104" y2="58"/>
+        </g>
+      </g>
+    </g>
+    <circle cx="80" cy="80" r="10" fill="#f0b84f"/>
+    <circle cx="182" cy="80" r="10" fill="#f0b84f"/>
+    <circle cx="286" cy="80" r="10" fill="#f0b84f"/>
+    <path d="M58 135c60-13 116-7 168 18 41 20 77 27 112 23" fill="none" stroke="#f0b84f" stroke-width="8" stroke-linecap="round"/>
+    <path d="M88 98l-18 56M188 96l16 62M288 95l52 74" stroke="#ffffff" stroke-width="2" opacity=".62"/>
+    <text x="52" y="206" fill="#dce8f2" font-family="Inter, Arial, sans-serif" font-size="15">Angle spread drives cosine loss, shading, and mismatch</text>
+  </g>
+  <g transform="translate(102 442)">
+    <rect x="0" y="0" width="756" height="42" rx="8" fill="#ffffff" opacity=".1"/>
+    <text x="22" y="27" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="15">
+      Verify with row-end angle survey, drone shadow-line review, controller telemetry, and irradiance-normalized power.
+    </text>
+  </g>
+</svg>

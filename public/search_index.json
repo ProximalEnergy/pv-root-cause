@@ -4,13 +4,33 @@
     "title": "Module Hotspot from Cell Damage",
     "category": "Modules",
     "tags": [
-      "thermal anomaly",
-      "cell crack",
-      "drone IR",
+      "drone",
       "yield loss"
     ],
     "severity": "High",
     "impact_factor": "Localized heating can reduce string output and create escalating reliability risk when bypass diodes or cracked cells remain in service.",
     "route": "/cause/module-hotspot"
+  },
+  {
+    "id": "tracker-twist-performance-loss",
+    "title": "Performance Loss from Tracker Twist",
+    "category": "Trackers",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "High",
+    "impact_factor": "Row torsion creates uneven plane-of-array angle, cosine loss, row-to-row shading, and persistent mismatch that can depress production across an entire tracker block.",
+    "route": "/cause/tracker-twist-performance-loss"
+  },
+  {
+    "id": "tracker-wind-stow-losses",
+    "title": "Tracker Wind Stow Production Losses",
+    "category": "Trackers",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "Gust-triggered stow events move trackers away from the optimal tracking angle, creating modeled and actual production losses that can be materially higher than hourly weather data suggests.",
+    "route": "/cause/tracker-wind-stow-losses"
   }
 ]

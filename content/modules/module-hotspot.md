@@ -3,9 +3,7 @@ id: module-hotspot
 title: Module Hotspot from Cell Damage
 category: Modules
 tags:
-  - thermal anomaly
-  - cell crack
-  - drone IR
+  - drone 
   - yield loss
 severity: High
 impact_factor: Localized heating can reduce string output and create escalating reliability risk when bypass diodes or cracked cells remain in service.

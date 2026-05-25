@@ -40,13 +40,9 @@ fn CauseDetail(cause: CauseContent) -> impl IntoView {
 
             <section class="cause-detail__metadata" aria-labelledby="cause-metadata-title">
                 <h2 class="cause-detail__section-title" id="cause-metadata-title">
-                    "Metadata Checklist"
+                    "Overview"
                 </h2>
                 <dl class="cause-detail__checklist">
-                    <div class="cause-detail__checklist-item">
-                        <dt class="cause-detail__checklist-key">"Slug"</dt>
-                        <dd class="cause-detail__checklist-value">{cause.front_matter.id.clone()}</dd>
-                    </div>
                     <div class="cause-detail__checklist-item">
                         <dt class="cause-detail__checklist-key">"Category"</dt>
                         <dd class="cause-detail__checklist-value">{cause.front_matter.category.clone()}</dd>

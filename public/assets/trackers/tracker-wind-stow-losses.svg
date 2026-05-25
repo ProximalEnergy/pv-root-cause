@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 960 560">
+  <title>Tracker wind stow production loss diagram</title>
+  <desc>Hourly wind can remain below a stow threshold while short-duration gusts exceed it and force trackers into an off-angle stow position.</desc>
+  <rect width="960" height="560" fill="#f6f8f6"/>
+  <rect x="44" y="44" width="872" height="472" rx="8" fill="#1d203d"/>
+  <path d="M44 396c96-38 177-32 244 18 72 54 151 62 236 24 103-46 222-26 392 62v16H44Z" fill="#2f665b" opacity=".78"/>
+  <path d="M760 44h156v156c-80-18-133-72-156-156Z" fill="#7f98c5"/>
+  <g fill="#ffffff">
+    <text x="84" y="102" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Wind Stow Losses</text>
+    <text x="84" y="134" font-family="Inter, Arial, sans-serif" font-size="18" opacity=".82">Gust-triggered off-angle tracker operation</text>
+  </g>
+  <g transform="translate(92 178)">
+    <rect x="0" y="0" width="390" height="238" rx="8" fill="#ffffff" opacity=".08"/>
+    <line x1="48" y1="178" x2="340" y2="178" stroke="#c8d2dd" stroke-width="2"/>
+    <line x1="48" y1="38" x2="48" y2="178" stroke="#c8d2dd" stroke-width="2"/>
+    <line x1="48" y1="78" x2="340" y2="78" stroke="#f0b84f" stroke-width="4" stroke-dasharray="10 8"/>
+    <text x="54" y="66" fill="#f0b84f" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Stow threshold</text>
+    <path d="M50 145C82 138 111 142 139 139C167 136 187 135 215 137C244 139 273 134 338 136" fill="none" stroke="#7f98c5" stroke-width="5" stroke-linecap="round"/>
+    <path d="M50 150C78 146 95 102 116 138C137 175 153 40 174 132C193 213 211 52 231 126C250 198 272 54 294 118C315 179 326 111 338 128" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="174" cy="54" r="8" fill="#f0b84f"/>
+    <circle cx="231" cy="64" r="8" fill="#f0b84f"/>
+    <circle cx="294" cy="68" r="8" fill="#f0b84f"/>
+    <text x="64" y="210" fill="#dce8f2" font-family="Inter, Arial, sans-serif" font-size="15">Hourly average misses short gusts</text>
+  </g>
+  <g transform="translate(538 178)">
+    <rect x="0" y="0" width="330" height="238" rx="8" fill="#ffffff" opacity=".08"/>
+    <text x="20" y="32" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Tracker response</text>
+    <line x1="36" y1="154" x2="292" y2="154" stroke="#c8d2dd" stroke-width="4"/>
+    <g transform="translate(62 79) rotate(-10 90 36)">
+      <rect x="0" y="0" width="180" height="72" rx="4" fill="#264f78" stroke="#dce8f2" stroke-width="3"/>
+      <g stroke="#dce8f2" stroke-width="2" opacity=".86">
+        <line x1="36" y1="0" x2="36" y2="72"/>
+        <line x1="72" y1="0" x2="72" y2="72"/>
+        <line x1="108" y1="0" x2="108" y2="72"/>
+        <line x1="144" y1="0" x2="144" y2="72"/>
+        <line x1="0" y1="24" x2="180" y2="24"/>
+        <line x1="0" y1="48" x2="180" y2="48"/>
+      </g>
+    </g>
+    <path d="M80 183h156" stroke="#8fb36d" stroke-width="8" stroke-linecap="round"/>
+    <path d="M246 84c30 12 48 31 53 58" fill="none" stroke="#f0b84f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M292 143l10-27 15 24Z" fill="#f0b84f"/>
+    <text x="26" y="210" fill="#dce8f2" font-family="Inter, Arial, sans-serif" font-size="15">Stow protects structure but creates off-angle yield loss</text>
+  </g>
+  <g transform="translate(102 442)">
+    <rect x="0" y="0" width="756" height="42" rx="8" fill="#ffffff" opacity=".1"/>
+    <text x="22" y="27" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="15">
+      Validate with controller stow logs, high-frequency gust data, irradiance-normalized SCADA, and energy model assumptions.
+    </text>
+  </g>
+</svg>

@@ -403,7 +403,7 @@ button {
 .cause-detail__content,
 .image-gallery,
 .about-page__section,
-.tags-page__list {
+.tags-page__index {
     margin-top: 32px;
 }
 
@@ -610,48 +610,79 @@ button {
     max-width: 900px;
 }
 
-.tags-page__list {
-    margin-left: -10px;
+.tags-page__index {
+    border-top: 1px solid #d7dfd9;
+    max-width: 760px;
 }
 
-.tags-page__tag {
-    background: #ffffff;
-    border: 1px solid #d7dfd9;
-    border-radius: 8px;
-    color: #172027;
-    cursor: pointer;
-    display: inline-block;
-    margin: 10px 0 0 10px;
-    max-width: 100%;
-    min-height: 44px;
-    overflow-wrap: anywhere;
-    padding: 6px 10px 7px 4px;
-    text-align: left;
+.tags-page__group {
+    border-bottom: 1px solid #d7dfd9;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.tags-page__letter {
+    color: #2f665b;
+    display: table-cell;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.4;
+    margin: 0;
+    padding: 14px 16px 14px 0;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 56px;
+}
+
+.tags-page__list {
+    display: table-cell;
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
     vertical-align: top;
 }
 
-.tags-page__tag:hover,
-.tags-page__tag:focus-visible {
-    border-color: #125a75;
+.tags-page__item {
+    margin: 0;
 }
 
-.tags-page__tag .tag-pill {
-    margin-top: 0;
+.tags-page__link {
+    border-radius: 6px;
+    color: #172027;
+    display: table;
+    min-height: 34px;
+    padding: 5px 8px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.tags-page__link:hover,
+.tags-page__link:focus-visible {
+    background: #eef4f1;
+    color: #125a75;
+}
+
+.tags-page__name,
+.tags-page__count {
+    display: table-cell;
+    line-height: 1.45;
+    vertical-align: middle;
+}
+
+.tags-page__name {
+    font-weight: 800;
+    overflow-wrap: anywhere;
+    padding-right: 8px;
 }
 
 .tags-page__count {
-    background: #f5d08a;
-    border-radius: 999px;
-    color: #4d390f;
-    display: inline-block;
-    font-size: 0.8125rem;
+    color: #5f6b67;
+    font-size: 0.875rem;
     font-weight: 800;
-    line-height: 1;
-    margin: 1px 0 0 8px;
-    min-width: 1.75rem;
-    padding: 6px 7px;
-    text-align: center;
-    vertical-align: top;
+    text-align: right;
+    white-space: nowrap;
+    width: 44px;
 }
 
 @media (max-width: 720px) {
@@ -726,8 +757,37 @@ button {
         padding-top: 4px;
     }
 
-    .tags-page__tag {
-        width: 100%;
+    .tags-page__group,
+    .tags-page__letter,
+    .tags-page__list,
+    .tags-page__link,
+    .tags-page__name,
+    .tags-page__count {
+        display: block;
+        width: auto;
+    }
+
+    .tags-page__letter {
+        padding: 14px 0 4px;
+    }
+
+    .tags-page__list {
+        padding: 0 0 8px;
+    }
+
+    .tags-page__link {
+        min-height: 0;
+        padding: 6px 0;
+    }
+
+    .tags-page__name {
+        padding-right: 0;
+    }
+
+    .tags-page__count {
+        margin-top: 2px;
+        text-align: left;
+        white-space: normal;
     }
 }
 
