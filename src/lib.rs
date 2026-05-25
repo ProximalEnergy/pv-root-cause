@@ -11,7 +11,7 @@ use leptos_router::components::{Route, Router, Routes};
 use leptos_router::path;
 use leptos_router::static_routes::{StaticParamsMap, StaticRoute};
 use models::SearchRecord;
-use pages::{AboutPage, CauseDetailPage, HomePage, TagsPage};
+use pages::{AboutPage, CauseDetailPage, HomePage, SubmitPage, TagsPage};
 
 const SEARCH_INDEX_JSON: &str = include_str!("../public/search_index.json");
 
@@ -58,6 +58,11 @@ pub fn App() -> impl IntoView {
                         <Route
                             path=path!("/tags")
                             view=TagsPage
+                            ssr=SsrMode::Static(StaticRoute::new())
+                        />
+                        <Route
+                            path=path!("/submit")
+                            view=SubmitPage
                             ssr=SsrMode::Static(StaticRoute::new())
                         />
                         <Route

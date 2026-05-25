@@ -1,5 +1,16 @@
 [
   {
+    "id": "inverter-voltage-floor-losses",
+    "title": "Inverter Voltage Floor Losses",
+    "category": "Inverters",
+    "tags": [
+      "yield loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "When array Vmp falls below the inverter minimum DC input voltage, the inverter cannot hold the array at its maximum power point and recoverable energy can be left on the DC side.",
+    "route": "/cause/inverter-voltage-floor-losses"
+  },
+  {
     "id": "module-hotspot",
     "title": "Module Hotspot from Cell Damage",
     "category": "Modules",
