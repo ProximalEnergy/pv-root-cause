@@ -39,7 +39,9 @@ jobs:
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
       - name: Install cargo-leptos
-        run: cargo install cargo-leptos --locked
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-leptos@0.3.6
 
       - name: Validate content
         run: cargo test
