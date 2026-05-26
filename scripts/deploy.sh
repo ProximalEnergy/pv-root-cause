@@ -16,7 +16,7 @@ if ! cargo leptos --version >/dev/null 2>&1; then
   cargo install cargo-leptos --locked
 fi
 
-cargo test
+cargo test --lib --test content_validation
 cargo leptos build --release
 PV_EXPORT_STATIC=1 cargo leptos serve --release
 

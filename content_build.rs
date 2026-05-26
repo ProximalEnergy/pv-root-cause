@@ -57,13 +57,22 @@ pub fn build_content_from_paths(
     validate_search_records(&causes, &search_records)?;
 
     fs::create_dir_all(public_dir)?;
-    fs::write(&cause_content_path, serde_json::to_string_pretty(&causes)?)?;
-    fs::write(
+    write_if_changed(&cause_content_path, &serde_json::to_string_pretty(&causes)?)?;
+    write_if_changed(
         &search_index_path,
-        serde_json::to_string_pretty(&search_records)?,
+        &serde_json::to_string_pretty(&search_records)?,
     )?;
 
     Ok(search_records)
+}
+
+fn write_if_changed(path: &Path, content: &str) -> Result<(), Box<dyn Error>> {
+    if fs::read_to_string(path).is_ok_and(|existing| existing == content) {
+        return Ok(());
+    }
+
+    fs::write(path, content)?;
+    Ok(())
 }
 
 pub fn markdown_files(root: &Path) -> Result<Vec<PathBuf>, Box<dyn Error>> {

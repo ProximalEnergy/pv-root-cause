@@ -4,7 +4,7 @@ Static Leptos compendium for photovoltaic underperformance root causes.
 
 ## Useful Commands
 
-- Build and validate content: `cargo test`
+- Build and validate content: `cargo test --lib --test content_validation`
 - Build the static site assets: `cargo leptos build`
 - Serve locally: `mise dev`
 - Deploy static build and Route 53 DNS: `mise deploy`
@@ -43,7 +43,7 @@ The build script parses all Markdown content, validates metadata, renders Markdo
 - `public/cause_content.json`
 - `public/search_index.json`
 
-Invalid content fails fast during `cargo test`, `cargo check`, or `cargo leptos build`. The validation suite covers duplicate IDs, missing image captions, invalid severity values, and verifies that every valid cause appears in the generated search index exactly once.
+Invalid content fails fast during `cargo test --lib --test content_validation`, `cargo check`, or `cargo leptos build`. The validation suite covers duplicate IDs, missing image captions, invalid severity values, and verifies that every valid cause appears in the generated search index exactly once.
 
 ## Why Rust
 
