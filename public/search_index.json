@@ -89,6 +89,18 @@
     "route": "/cause/spectral-effect-losses"
   },
   {
+    "id": "system-vs-module-degradation",
+    "title": "System Degradation vs Module Degradation",
+    "category": "Modules",
+    "tags": [
+      "degradation",
+      "yield loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "System-level degradation can be higher than the nameplate module degradation rate when modules degrade at different rates and create additional electrical mismatch.",
+    "route": "/cause/system-vs-module-degradation"
+  },
+  {
     "id": "terrain-undulation-yield-losses",
     "title": "Terrain Undulation Yield Losses",
     "category": "Trackers",

@@ -74,6 +74,12 @@ fn CauseDetail(cause: CauseContent) -> impl IntoView {
                             {cause.front_matter.mitigation.clone()}
                         </dd>
                     </div>
+                    <div class="cause-detail__checklist-item">
+                        <dt class="cause-detail__checklist-key">"Contributors"</dt>
+                        <dd class="cause-detail__checklist-value">
+                            <a href="/contributors">"Kurt Rhee"</a>
+                        </dd>
+                    </div>
                 </dl>
             </section>
 

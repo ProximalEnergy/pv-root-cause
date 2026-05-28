@@ -45,6 +45,10 @@ pub fn AboutPage() -> impl IntoView {
                         " Recommended corrective or preventive action."
                     </li>
                     <li class="about-page__list-item">
+                        <strong>"Contributors:"</strong>
+                        " People who contributed the entry."
+                    </li>
+                    <li class="about-page__list-item">
                         <strong>"Tags:"</strong>
                         " Cross-reference taxonomy labels for multi-dimensional filtering."
                     </li>

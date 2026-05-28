@@ -11,6 +11,7 @@ pub fn Header() -> impl IntoView {
                 <A attr:class="site-header__link" href="/tags">"Tags"</A>
                 <A attr:class="site-header__link" href="/submit">"Submit"</A>
                 <A attr:class="site-header__link" href="/about">"About"</A>
+                <A attr:class="site-header__link" href="/contributors">"Contributors"</A>
             </nav>
         </header>
     }

@@ -77,7 +77,7 @@ button {
     font-size: 1rem;
     font-weight: 800;
     line-height: 1.35;
-    max-width: 58%;
+    max-width: 38%;
     overflow-wrap: anywhere;
     text-decoration: none;
 }
@@ -94,7 +94,7 @@ button {
 .site-header__nav {
     float: right;
     line-height: 1.35;
-    max-width: 42%;
+    max-width: 62%;
     text-align: right;
 }
 
