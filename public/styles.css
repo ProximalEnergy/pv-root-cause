@@ -655,6 +655,71 @@ button {
     color: #172027;
 }
 
+.contributors-page__list {
+    border: 1px solid #d7dfd9;
+    border-radius: 8px;
+    margin-top: 14px;
+    max-width: 760px;
+    overflow: hidden;
+}
+
+.contributors-page__item {
+    background: #ffffff;
+    border-top: 1px solid #d7dfd9;
+}
+
+.contributors-page__item:first-child {
+    border-top: 0;
+}
+
+.contributors-page__summary {
+    color: #172027;
+    cursor: pointer;
+    font-weight: 800;
+    line-height: 1.4;
+    min-height: 48px;
+    overflow-wrap: anywhere;
+    padding: 13px 16px;
+}
+
+.contributors-page__summary::marker {
+    color: #2f665b;
+}
+
+.contributors-page__name {
+    text-decoration: none;
+}
+
+.contributors-page__name:hover,
+.contributors-page__name:focus-visible,
+.contributors-page__contribution a:hover,
+.contributors-page__contribution a:focus-visible {
+    color: #125a75;
+}
+
+.contributors-page__count {
+    color: #5f6b67;
+    font-weight: 700;
+}
+
+.contributors-page__contributions {
+    border-top: 1px solid #d7dfd9;
+    color: #3d4945;
+    line-height: 1.55;
+    list-style: none;
+    margin: 0;
+    padding: 10px 16px 14px 38px;
+}
+
+.contributors-page__contribution {
+    margin-top: 8px;
+    overflow-wrap: anywhere;
+}
+
+.contributors-page__contribution:first-child {
+    margin-top: 0;
+}
+
 .tags-page {
     max-width: 900px;
 }

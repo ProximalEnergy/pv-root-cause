@@ -1,5 +1,75 @@
 [
   {
+    "id": "bypass-diode-failure",
+    "title": "Bypass Diode Failure",
+    "category": "Modules",
+    "tags": [
+      "Bypass diode",
+      "PV failure",
+      "hotspot",
+      "module mismatch"
+    ],
+    "severity": "High",
+    "impact_factor": "Failed bypass diodes can create substring loss, overheating, reverse-bias stress, arcing risk, and module-level performance loss.",
+    "route": "/cause/bypass-diode-failure"
+  },
+  {
+    "id": "cable-defect",
+    "title": "Cable Defect",
+    "category": "Wiring",
+    "tags": [
+      "Cable",
+      "PV failure",
+      "Insulation fault",
+      "DC wiring"
+    ],
+    "severity": "High",
+    "impact_factor": "Damaged or undersized DC cables can cause overheating, insulation faults, ground faults, production loss, and fire risk.",
+    "route": "/cause/cable-defect"
+  },
+  {
+    "id": "cell-cracks",
+    "title": "Cell Cracks",
+    "category": "Modules",
+    "tags": [
+      "Cell crack",
+      "PV failure",
+      "PV aging",
+      "electroluminescence"
+    ],
+    "severity": "High",
+    "impact_factor": "Severe cracks can isolate active cell area, create mismatch, activate bypass diodes, and reduce module output.",
+    "route": "/cause/cell-cracks"
+  },
+  {
+    "id": "cell-interconnection-failure",
+    "title": "Cell Interconnection Failure",
+    "category": "Modules",
+    "tags": [
+      "PV cell",
+      "cell interconnection",
+      "PV failure",
+      "solder bond"
+    ],
+    "severity": "High",
+    "impact_factor": "Broken or resistive cell interconnections can block current, activate bypass diodes, and cause severe power loss or thermal stress.",
+    "route": "/cause/cell-interconnection-failure"
+  },
+  {
+    "id": "connector-defect",
+    "title": "Connector Defect",
+    "category": "Wiring",
+    "tags": [
+      "Connector",
+      "PV failure",
+      "Insulation fault",
+      "arcing"
+    ],
+    "severity": "High",
+    "impact_factor": "Connector defects can create resistance heating, open circuits, ground faults, arcing, electrical risk, and fire hazards.",
+    "route": "/cause/connector-defect"
+  },
+  {
     "id": "flawed-pan-file-losses",
     "title": "Flawed PAN File Yield Losses",
     "category": "Modules",
@@ -20,6 +90,20 @@
     "severity": "Medium",
     "impact_factor": "Fungal growth and related persistent biological contamination can reduce glass transmittance, increase nonuniform soiling, and create production losses that do not reset after light rain.",
     "route": "/cause/fungal-soiling-losses"
+  },
+  {
+    "id": "glass-breakage",
+    "title": "Glass Breakage",
+    "category": "Modules",
+    "tags": [
+      "Glass breakage",
+      "PV failure",
+      "insulation fault",
+      "module safety"
+    ],
+    "severity": "High",
+    "impact_factor": "Broken module glass can cause safety hazards, insulation faults, moisture ingress, and accelerated electrical degradation.",
+    "route": "/cause/glass-breakage"
   },
   {
     "id": "granular-dust-soiling-losses",
@@ -55,6 +139,34 @@
     "route": "/cause/inverter-voltage-floor-losses"
   },
   {
+    "id": "junction-box-failure",
+    "title": "Junction Box Failure",
+    "category": "Modules",
+    "tags": [
+      "Junction Box diode",
+      "Arcing",
+      "Fire",
+      "PV failure"
+    ],
+    "severity": "High",
+    "impact_factor": "Junction-box failures can interrupt module connections, damage bypass diodes, create arcing, and produce severe safety and performance issues.",
+    "route": "/cause/junction-box-failure"
+  },
+  {
+    "id": "light-induced-degradation",
+    "title": "Light Induced Degradation (LID)",
+    "category": "Modules",
+    "tags": [
+      "Light Induced Degradation",
+      "LID",
+      "module degradation",
+      "photovoltaic"
+    ],
+    "severity": "Medium",
+    "impact_factor": "Initial light exposure can cause technology-dependent module power loss, with amorphous silicon and susceptible crystalline modules showing material stabilization effects.",
+    "route": "/cause/light-induced-degradation"
+  },
+  {
     "id": "module-hotspot",
     "title": "Module Hotspot from Cell Damage",
     "category": "Modules",
@@ -67,6 +179,34 @@
     "route": "/cause/module-hotspot"
   },
   {
+    "id": "potential-induced-degradation",
+    "title": "Potential Induced Degradation (PID)",
+    "category": "Modules",
+    "tags": [
+      "PID",
+      "PV failure",
+      "module degradation",
+      "leakage current"
+    ],
+    "severity": "High",
+    "impact_factor": "High module-to-ground voltage can drive leakage-current mechanisms that substantially reduce string and module power.",
+    "route": "/cause/potential-induced-degradation"
+  },
+  {
+    "id": "severe-metallization-corrosion",
+    "title": "Severe Metallization Corrosion",
+    "category": "Modules",
+    "tags": [
+      "Corrosion",
+      "PV degradation",
+      "water ingress",
+      "metallization"
+    ],
+    "severity": "High",
+    "impact_factor": "Water ingress and metallization corrosion can increase series resistance, reduce current collection, and create severe module power degradation.",
+    "route": "/cause/severe-metallization-corrosion"
+  },
+  {
     "id": "snow-accumulation-losses",
     "title": "Snow Accumulation Yield Losses",
     "category": "Soiling",
@@ -76,6 +216,20 @@
     "severity": "Medium",
     "impact_factor": "Snow cover blocks irradiance at the module surface, creates partial-string mismatch during melt and slide-off, and can materially reduce winter energy yield in cold regions.",
     "route": "/cause/snow-accumulation-losses"
+  },
+  {
+    "id": "soiling-losses",
+    "title": "Soiling Losses",
+    "category": "Soiling",
+    "tags": [
+      "Soiling",
+      "PV loss",
+      "cleaning",
+      "environmental loss"
+    ],
+    "severity": "Medium",
+    "impact_factor": "Dust, snow, dirt, and other deposited particles reduce irradiance reaching the module surface and can create geographically variable production losses.",
+    "route": "/cause/soiling-losses"
   },
   {
     "id": "spectral-effect-losses",

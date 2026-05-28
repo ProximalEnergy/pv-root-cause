@@ -11,6 +11,8 @@ pub struct CauseFrontMatter {
     pub impact_factor: String,
     pub detection_method: String,
     pub mitigation: String,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub contributors: Vec<CauseContributor>,
     #[serde(default)]
     pub images: Vec<CauseImage>,
 }
@@ -34,6 +36,19 @@ impl CauseFrontMatter {
             validate_required(&format!("tags[{index}]"), tag, &mut errors);
         }
 
+        for (index, contributor) in self.contributors.iter().enumerate() {
+            validate_required(
+                &format!("contributors[{index}].name"),
+                &contributor.name,
+                &mut errors,
+            );
+            validate_required(
+                &format!("contributors[{index}].url"),
+                &contributor.url,
+                &mut errors,
+            );
+        }
+
         for (index, image) in self.images.iter().enumerate() {
             validate_required(&format!("images[{index}].path"), &image.path, &mut errors);
             validate_required(
@@ -53,6 +68,12 @@ impl CauseFrontMatter {
     pub fn route_path(&self) -> String {
         format!("/cause/{}", self.id)
     }
+}
+
+#[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize)]
+pub struct CauseContributor {
+    pub name: String,
+    pub url: String,
 }
 
 #[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize)]
@@ -215,6 +236,7 @@ mod tests {
             impact_factor: "Localized power loss and fire risk".to_string(),
             detection_method: "Drone IR inspection".to_string(),
             mitigation: "Replace affected module".to_string(),
+            contributors: Vec::new(),
             images: vec![CauseImage {
                 path: "/assets/modules/hotspot-ir.svg".to_string(),
                 caption: "IR image showing a hotspot".to_string(),
@@ -237,6 +259,7 @@ mod tests {
             impact_factor: String::new(),
             detection_method: "  ".to_string(),
             mitigation: String::new(),
+            contributors: Vec::new(),
             images: vec![CauseImage {
                 path: String::new(),
                 caption: String::new(),

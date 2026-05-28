@@ -25,6 +25,9 @@ severity: High
 impact_factor: Localized heating can reduce string output.
 detection_method: Drone infrared inspection.
 mitigation: Replace affected module after electrical confirmation.
+contributors:
+  - name: Alexandre Mathieu
+    url: https://github.com/AlexandreHugoMathieu
 images:
   - path: /assets/modules/hotspot-ir.svg
     caption: Representative infrared frame showing a localized hotspot.
@@ -32,7 +35,7 @@ images:
 ---
 ```
 
-Allowed severity values are `Low`, `Medium`, and `High`. Each entry must have a unique `id` and at least one tag. Image references are optional; when included, every image must include a non-empty `caption`. Image `alt` text is optional but recommended when the caption is not descriptive enough for non-visual use.
+Allowed severity values are `Low`, `Medium`, and `High`. Each entry must have a unique `id` and at least one tag. `contributors` is optional; entries without it render with the default site contributor. Image references are optional; when included, every image must include a non-empty `caption`. Image `alt` text is optional but recommended when the caption is not descriptive enough for non-visual use.
 
 After the front matter, write the engineering reference in Markdown. Raw HTML is stripped during rendering.
 

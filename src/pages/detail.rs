@@ -1,5 +1,5 @@
-use crate::components::{ImageGallery, TagPill};
-use crate::models::CauseContent;
+use crate::components::TagPill;
+use crate::models::{CauseContent, CauseContributor};
 use leptos::prelude::*;
 use leptos_router::hooks::use_params_map;
 
@@ -27,6 +27,14 @@ pub fn CauseDetailPage() -> impl IntoView {
 #[component]
 fn CauseDetail(cause: CauseContent) -> impl IntoView {
     let front_matter = cause.front_matter.clone();
+    let contributors = if cause.front_matter.contributors.is_empty() {
+        vec![CauseContributor {
+            name: "Kurt Rhee".to_string(),
+            url: "https://github.com/kurt-rhee".to_string(),
+        }]
+    } else {
+        cause.front_matter.contributors.clone()
+    };
 
     view! {
         <article class="cause-detail">
@@ -77,7 +85,13 @@ fn CauseDetail(cause: CauseContent) -> impl IntoView {
                     <div class="cause-detail__checklist-item">
                         <dt class="cause-detail__checklist-key">"Contributors"</dt>
                         <dd class="cause-detail__checklist-value">
-                            <a href="/contributors">"Kurt Rhee"</a>
+                            <For
+                                each=move || contributors.clone()
+                                key=|contributor| contributor.url.clone()
+                                let:contributor
+                            >
+                                <a href=contributor.url>{contributor.name}</a>
+                            </For>
                         </dd>
                     </div>
                 </dl>
@@ -89,8 +103,6 @@ fn CauseDetail(cause: CauseContent) -> impl IntoView {
                 </h2>
                 <div class="cause-detail__prose" inner_html=cause.body_html.clone()></div>
             </section>
-
-            <ImageGallery images=cause.front_matter.images.clone()/>
         </article>
     }
 }
